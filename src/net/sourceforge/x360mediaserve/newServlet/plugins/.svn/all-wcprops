@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svnroot/x360mediaserve/!svn/ver/24/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/newServlet/plugins
+END
+ConfigItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svnroot/x360mediaserve/!svn/ver/24/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/newServlet/plugins/ConfigItem.java
+END
+ConfigPlugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svnroot/x360mediaserve/!svn/ver/24/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/newServlet/plugins/ConfigPlugin.java
+END
+PlaybackPlugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/x360mediaserve/!svn/ver/24/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/newServlet/plugins/PlaybackPlugin.java
+END
+TextConfigItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svnroot/x360mediaserve/!svn/ver/24/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/newServlet/plugins/TextConfigItem.java
+END
+Plugin.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svnroot/x360mediaserve/!svn/ver/24/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/newServlet/plugins/Plugin.java
+END

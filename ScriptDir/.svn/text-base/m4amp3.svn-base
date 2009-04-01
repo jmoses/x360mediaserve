@@ -1,0 +1,7 @@
+#!/bin/bash
+PATH=/sw/bin:/:$PATH
+# this is horrific but I can't seem to get it to work another way, any bash experts willing to help
+# remove " from filename
+var=${1%\"}
+var=${var#\"}
+faad "$var" -w 2>/tmp/faaderr | lame --preset insane - 

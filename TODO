@@ -1,0 +1,17 @@
+Some features I'd like to add
+
+
+1. Replace the output system with a proper system based around supported formats rather than the current fixed set
+2. Make attributes of the URL in song file data correct rather than the curren hacked in ones, should be easy enough to do when assuming CBR output formats. Even though the 360 doesnt care now it might in the future.
+3. XML file format for storing song database
+4. Proper search system with parser etc rather than being hacked since we know what the xbox will ask for
+5. Monitor itunes xml and update if it changes.
+6. Provide configuration of stuff like Friendly name
+7. Provide communication between the different services.
+8. Try and provide more control over encoding etc
+
+
+Done
+1. PCM support pretty much done (need a byte swap program for faad)
+2. FLAC and other filetypes support (should be very easy to do with mp3 transcode)
+3. iTunes xml database reading (pretty much done)

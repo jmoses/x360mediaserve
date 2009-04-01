@@ -1,0 +1,39 @@
+
+
+Windows
+
+To run this you need to obtain the following files
+lame.exe      -  mp3 encoder binary
+oggdec.exe or sox.exe (with ogg support)    -  ogg decoder (if you plan on using ogg support), can also use sox
+faad.exe      -  faad2 aac decoder binary
+flac.exe		-	flac decoder
+
+copy the exe files into scriptdir
+to start the server click run start.bat
+
+Mac
+
+install lame,faad,flac and sox (preferably using fink)
+run startmac 
+
+Linux
+
+install lame,faad,flac and sox where they will be found by a bash script
+run start
+
+----------
+
+If you are running Windows media connect then disable it and disconnect it from the xbox via the xbox options.
+
+To configure point your browser to http://127.0.0.1:7000/conf.html I suggest to test it you only point it at a small number such as a single album
+
+-----------
+
+If the 360 can't detect it there's a good chance its caused by the Firewall blocking it. Try disabling the firewall or giving java permission to act as a server on the local network.
+
+If you get errors about could not open socket try adding the ip after the start script e.g ./start 192.168.0.1
+
+If you get silence try running the relavent conversion script from a terminal
+
+If you get static on the 360 there's a good chance its caused by the endianness of the output from the relevant script being wrong. Try adding/removing the -x flag from lame
+

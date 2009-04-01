@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers
+END
+NativePlaybackType.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/NativePlaybackType.java
+END
+External.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/External.java
+END
+ExternalFile.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/ExternalFile.java
+END
+StreamNative.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/StreamNative.java
+END
+Streamer.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/Streamer.java
+END
+TranscodingPlaybackType.java
+K 25
+svn:wc:ra_dav:version-url
+V 160
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/TranscodingPlaybackType.java
+END
+Native.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/Native.java
+END
+PlaybackType.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/PlaybackType.java
+END
+StreamExternal.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/StreamExternal.java
+END
+StreamStreamer.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svnroot/x360mediaserve/!svn/ver/19/trunk/x360mediaserve/src/net/sourceforge/x360mediaserve/upnpmediaserver/mediaDatabase/streamers/StreamStreamer.java
+END

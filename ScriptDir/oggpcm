@@ -1,0 +1,2 @@
+#!/bin/bash
+sox -t ogg "$1" -t raw -r 44100 -c 2 -w -s - 

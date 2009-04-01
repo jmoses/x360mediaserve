@@ -1,0 +1,10 @@
+Everything outside of lib is under the GPL unless it carries another license. It is provided WITHOUT warranty.
+
+Everything inside lib is unmodified and has the license as a txt file in the directory.
+
+The complete projects can be found at
+
+Jetty - http://jetty.mortbay.org/jetty/index.html
+Entagged - http://entagged.sourceforge.net/
+Cyberlink - http://sourceforge.net/projects/cgupnpjava/
+Xerces - http://xerces.apache.org/  
