@@ -56,9 +56,10 @@ public class Run {
 		MediaServer mediaServer;
 		if(args.length>0){										
 			// if we are given an address then use it
+			String addr = args[0].trim();
 			try{
-				logger.debug("About to start media server on:"+args[0]);
-				mediaServer=new MediaServer(InetAddress.getByName(args[0]).getHostAddress());
+				logger.debug("Trying to start server on: '"+ addr +"'");
+				mediaServer=new MediaServer(InetAddress.getByName(addr).getHostAddress());
 			}
 			catch(UnknownHostException e)
 			{
