@@ -34,6 +34,7 @@ public class Album extends Container{
 	protected Artist artist;
 
 	protected TreeSet<AudioItem> songs=new TreeSet<AudioItem>(
+	  // This is what puts the songs in alphabetical order, rather than track order.
 			new Comparator<AudioItem>(){
 				public int compare(AudioItem o1,
 						AudioItem o2){

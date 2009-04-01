@@ -48,7 +48,12 @@ public class EntaggedTagger implements Tagger {
 			result.setNumberOfChannels(audiofile.getChannelNumber());
 			
 			try{
-				result.setTracknumber(Integer.parseInt(entaggedtag.getFirstTrack()));
+        String trackNumber = entaggedtag.getFirstTrack();
+        if( trackNumber.indexOf("/") != -1 ) {
+          trackNumber = trackNumber.split("/")[0];
+        }
+        logger.debug("Tracknumber for " + file.toString() + " is " + trackNumber.toString() );
+				result.setTracknumber(Integer.parseInt( trackNumber ));
 			}
 			catch(NumberFormatException e){
 				logger.info("No Tracknumber for file "+file.toString());

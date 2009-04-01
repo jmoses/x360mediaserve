@@ -54,4 +54,22 @@
       
     </jar>
   </target>
+  
+  <target name="internal-dist" depends="jar">
+    <delete dir="${dist}/internal" />
+    <mkdir dir="${dist}/internal" />
+    <mkdir dir="${dist}/internal/lib" />
+    
+    <copy file="${dist}/x360mediaserve.jar" todir="${dist}/internal/lib" />
+    <copy todir="${dist}/internal/files">
+      <fileset dir="files" />
+    </copy>
+    <copy file="start" todir="${dist}/internal" />
+    <copy todir="${dist}/internal/lib" flatten="true">
+      <fileset dir="lib">
+        <include name="**/*.jar" />
+      </fileset>
+    </copy>
+  </target>
+  
 </project>
