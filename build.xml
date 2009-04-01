@@ -32,16 +32,16 @@
   
   <target name="jar" depends="compile">
     <mkdir dir="${dist}" />
-    <mkdir dir="${dist}/jars" />
+    <!-- <mkdir dir="${dist}/jars" />
     <unjar dest="${dist}/jars">
       <fileset dir="lib">
         <include name="**/*.jar" />
       </fileset>
-    </unjar>
+    </unjar> -->
     
-    <jar destfile="${dist}/x360mediaser.jar">
+    <jar destfile="${dist}/x360mediaserve.jar">
       <fileset dir="${build}" />
-      <fileset dir="${dist}/jars" />
+      <!-- <fileset dir="${dist}/jars" /> -->
       <manifest>
         <!-- Who is building this jar? -->
         <attribute name="Built-By" value="${user.name}"/>
