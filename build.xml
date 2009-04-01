@@ -1,0 +1,57 @@
+<project name="x360mediaserve" default="compile">
+  <property name="src" value="src" />
+  <property name="build" value="build" />
+  <property name="dist" value="dist" />
+  
+  <target name="setup">
+    <mkdir dir="${src}" />
+    <mkdir dir="${build}" />
+  </target>
+  
+  <path id="classpath">
+    <fileset dir="lib">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+  
+  <target name="compile" depends="setup">
+    <javac srcdir="${src}"
+           destdir="${build}"
+           debug="on"
+    >
+      <classpath refid="classpath" />
+    </javac>
+  </target>
+  
+  <target name="run" depends="compile">
+    <java classname="Run">
+      <classpath refid="classpath" />
+      <classpath path="${build}" />
+    </java>
+  </target>
+  
+  <target name="jar" depends="compile">
+    <mkdir dir="${dist}" />
+    <mkdir dir="${dist}/jars" />
+    <unjar dest="${dist}/jars">
+      <fileset dir="lib">
+        <include name="**/*.jar" />
+      </fileset>
+    </unjar>
+    
+    <jar destfile="${dist}/x360mediaser.jar">
+      <fileset dir="${build}" />
+      <fileset dir="${dist}/jars" />
+      <manifest>
+        <!-- Who is building this jar? -->
+        <attribute name="Built-By" value="${user.name}"/>
+        <!-- Information about the program itself -->
+        <attribute name="Implementation-Vendor" value="Burning Bush Production, Inc."/>
+        <attribute name="Implementation-Title" value="x360mediaserv"/>
+        <attribute name="Implementation-Version" value="dev"/>
+        <attribute name="Main-Class" value="Run" />
+      </manifest>
+      
+    </jar>
+  </target>
+</project>

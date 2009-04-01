@@ -31,7 +31,7 @@ import net.sourceforge.x360mediaserve.clinkwrap.responder.UPNPResponder;
 import net.sourceforge.x360mediaserve.newServlet.plugins.ConfigPlugin;
 import net.sourceforge.x360mediaserve.newServlet.plugins.PlaybackPlugin;
 import net.sourceforge.x360mediaserve.newServlet.plugins.Plugin;
-import net.sourceforge.x360mediaserve.newServlet.plugins.Scrobbling;
+// import net.sourceforge.x360mediaserve.newServlet.plugins.Scrobbling;
 import net.sourceforge.x360mediaserve.upnpmediaserver.mediareceiverregistrar.MediaReceiverRegistrar;
 import net.sourceforge.x360mediaserve.upnpmediaserver.upnp.contentdirectory.ContentDirectory;
 
