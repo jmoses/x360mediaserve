@@ -30,8 +30,25 @@
     </java>
   </target>
   
-  <target name="jar" depends="compile">
+  <target name="dist:clean">
+    <delete dir="${dist}" />
+  </target>
+
+  <target name="dist:prepare" depends="dist:clean">
     <mkdir dir="${dist}" />
+  </target>
+  
+  <target name="dist:internal:prepare" depends="dist:prepare">
+    <mkdir dir="${dist}/internal" />
+    <mkdir dir="${dist}/internal/lib" />
+  </target>
+  
+  <target name="dist:release:prepare" depends="dist:prepare">
+    <mkdir dir="${dist}/release" />
+    <mkdir dir="${dist}/release/jars" />
+  </target>
+  
+  <target name="jar" depends="dist:prepare,compile">
     <!-- <mkdir dir="${dist}/jars" />
     <unjar dest="${dist}/jars">
       <fileset dir="lib">
@@ -46,8 +63,8 @@
         <!-- Who is building this jar? -->
         <attribute name="Built-By" value="${user.name}"/>
         <!-- Information about the program itself -->
-        <attribute name="Implementation-Vendor" value="Burning Bush Production, Inc."/>
-        <attribute name="Implementation-Title" value="x360mediaserv"/>
+        <attribute name="Implementation-Vendor" value="Burning Bush Production, LLC"/>
+        <attribute name="Implementation-Title" value="x360mediaserve"/>
         <attribute name="Implementation-Version" value="dev"/>
         <attribute name="Main-Class" value="Run" />
       </manifest>
@@ -55,11 +72,7 @@
     </jar>
   </target>
   
-  <target name="internal-dist" depends="jar">
-    <delete dir="${dist}/internal" />
-    <mkdir dir="${dist}/internal" />
-    <mkdir dir="${dist}/internal/lib" />
-    
+  <target name="dist:internal" depends="dist:internal:prepare,jar">    
     <copy file="${dist}/x360mediaserve.jar" todir="${dist}/internal/lib" />
     <copy todir="${dist}/internal/files">
       <fileset dir="files" />
@@ -71,5 +84,33 @@
       </fileset>
     </copy>
   </target>
+  
+  <target name="dist:release:build" depends="dist:release:prepare,compile">
+    <unjar dest="${dist}/release">
+      <fileset dir="lib">
+        <include name="**/*.jar" />
+      </fileset>
+    </unjar>
+    
+    <jar destfile="${dist}/release/x360mediaserve-release.jar">
+      <fileset dir="${build}" />
+      <fileset dir="${dist}/release" />
+      <manifest>
+        <!-- Who is building this jar? -->
+        <attribute name="Built-By" value="${user.name}"/>
+        <!-- Information about the program itself -->
+        <attribute name="Implementation-Vendor" value="Burning Bush Production, Inc."/>
+        <attribute name="Implementation-Title" value="x360mediaserv"/>
+        <attribute name="Implementation-Version" value="dev"/>
+        <attribute name="Main-Class" value="Run" />
+      </manifest>
+      
+    </jar>
+    
+    <copy file="${dist}/release/x360mediaserve-release.jar" todir="." />
+    
+  </target>
+  
+  <target name="dist:release" depends="dist:release:build,dist:clean" />
   
 </project>

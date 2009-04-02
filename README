@@ -1,39 +1,53 @@
+= README
 
+x360mediaserve is a Java based UPnP media server that's main purpose is to send 
+media files to a network attached Xbox360.
 
-Windows
+== Origins 
 
-To run this you need to obtain the following files
-lame.exe      -  mp3 encoder binary
-oggdec.exe or sox.exe (with ogg support)    -  ogg decoder (if you plan on using ogg support), can also use sox
-faad.exe      -  faad2 aac decoder binary
-flac.exe		-	flac decoder
+The project was started by Thomas Walker, and forked to Github (from r31) on
+2009-04-01 by Jon Moses (jon@burningbush.us) since it doesn't seem to be under
+active development anymore.
 
-copy the exe files into scriptdir
-to start the server click run start.bat
+== Running
 
-Mac
+Download the latest release from http://github.com/jmoses/x360mediaserve/tree/master
 
-install lame,faad,flac and sox (preferably using fink)
-run startmac 
+Under 'all tags', click the highest version "rel" tag and download.
 
-Linux
+Extract the archive.
 
-install lame,faad,flac and sox where they will be found by a bash script
-run start
+Run the server with:
 
-----------
+  java -jar x360mediaserve-release.jar
+  
+If you want to use a different IP from the one the server picks, supply it as an argument
+like:
 
-If you are running Windows media connect then disable it and disconnect it from the xbox via the xbox options.
+  java -jar x360mediaserve-release.jar x.x.x.x
 
-To configure point your browser to http://127.0.0.1:7000/conf.html I suggest to test it you only point it at a small number such as a single album
+The server will default to serving media from the directory you start it in, but you can 
+configure that.
+  
+== Configuring
 
------------
+Point a web browser at http://[ip address here]:7000/configure
 
-If the 360 can't detect it there's a good chance its caused by the Firewall blocking it. Try disabling the firewall or giving java permission to act as a server on the local network.
+This currently works best from the same machine the server is running on.
 
-If you get errors about could not open socket try adding the ip after the start script e.g ./start 192.168.0.1
+At least fill in a "Music Dir", and maybe a "Friendly Name".
 
-If you get silence try running the relavent conversion script from a terminal
+The "Music Dir" is the directory to scan for media files, and the "Friendly Name" is
+what will show up on your Xbox360.
 
-If you get static on the 360 there's a good chance its caused by the endianness of the output from the relevant script being wrong. Try adding/removing the -x flag from lame
+I have no idea if the other parts of the config work, at this point.
 
+== Common Issues
+
+The service won't run if Windows Media Connect is running on the same machine.
+
+I don't think that transcoding works properly, although I could be wrong, since I
+haven't tried it at all.  If it _doesn't_ work, you won't be able to play any media
+files that the Xbox360 can't handle natively.
+
+If it _does_ work, let me know.

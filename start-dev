@@ -1,2 +1,0 @@
-#!/bin/bash
-java -cp dist/x360mediaserve.jar:lib/log4j-1.2.15.jar:lib/cyberlink/clink170.jar:lib/cyberlink/cmgatejava120.jar:lib/jetty/commons-logging.jar:lib/entagged-audioformats-0.15.jar:lib/jetty/servlet-api-2.5-6.0.1.jar:lib/jetty/jetty-6.0.1.jar:lib/jetty/jetty-util-6.0.1.jar:lib/xercesImpl.jar:lib/xml-apis.jar:lib/cyberlink/clinkwrap.jar Run $1

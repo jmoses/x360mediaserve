@@ -1,10 +1,8 @@
-Everything outside of lib is under the GPL unless it carries another license. It is provided WITHOUT warranty.
+This code is license under the GPL, a copy of which is available in the LICENSE file.
 
-Everything inside lib is unmodified and has the license as a txt file in the directory.
+This project also uses the following third party projects, which are licensed as noted below.
 
-The complete projects can be found at
-
-Jetty - http://jetty.mortbay.org/jetty/index.html
-Entagged - http://entagged.sourceforge.net/
-Cyberlink - http://sourceforge.net/projects/cgupnpjava/
-Xerces - http://xerces.apache.org/  
+Jetty: http://jetty.mortbay.org/jetty/index.html - Apache License v2 (http://jetty.mortbay.org/jetty/LICENSE.txt)
+Entagged - http://entagged.sourceforge.net/ - GPL/LGPL (http://sourceforge.net/projects/entagged#item3rd-1)
+Cyberlink - http://sourceforge.net/projects/cgupnpjava/ - BSD License (http://sourceforge.net/projects/cgupnpjava/#item3rd-1)
+Xerces - http://xerces.apache.org/  - Apache License v2 (http://www.apache.org/licenses/)
