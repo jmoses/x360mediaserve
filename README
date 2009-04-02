@@ -37,10 +37,11 @@ This currently works best from the same machine the server is running on.
 
 At least fill in a "Music Dir", and maybe a "Friendly Name".
 
-The "Music Dir" is the directory to scan for media files, and the "Friendly Name" is
+The "Music Dir" is the directory to scan for audio files, and the "Friendly Name" is
 what will show up on your Xbox360.
 
-I have no idea if the other parts of the config work, at this point.
+The "Video Dir" is the directory to scan for video files.  This actually works,
+at this point, although there are some rough edges I think.
 
 == Common Issues
 
