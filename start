@@ -1,0 +1,12 @@
+#!/bin/bash
+
+classpath=""
+
+for f in lib/*.jar ; do
+  classpath="$classpath:$f"
+done
+
+
+echo $classpath
+
+java -cp $classpath Run $1
