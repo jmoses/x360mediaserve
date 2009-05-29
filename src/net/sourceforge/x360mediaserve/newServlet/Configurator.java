@@ -317,6 +317,13 @@ public class Configurator {
 					plugin.setConfig(params);
 				}
 			}
+			
+			// Redirect
+			try {
+  			resp.sendRedirect("/configure?result=OK");
+  		} catch( IOException ex ) {
+  		  ex.printStackTrace();
+  		}
 		}
 
 	}
@@ -330,6 +337,9 @@ public class Configurator {
 				PrintWriter writer=resp.getWriter();
 				//resp.getWriter().write("<form action=\"http://127.0.0.1:7000/configure/addDir\" method=\"POST\">Music Dir: <input type=\"text\" name=\"musicdir\"><br>iTunes File: <input type=\"text\" name=\"itunesfile\"><br><br><input type=\"submit\" value=\"Send\"></form><form action=\"http://127.0.0.1:7000/configure/addStream\" method=\"POST\">Stream Name:<input type=\"text\" name=\"name\"><br>Stream URL:<input type=\"text\" name=\"URL\"><br><br><input type=\"submit\" value=\"Send\"></form>");
 				writer.write("<HTML>\n");
+				if( req.getQueryString().indexOf("result=OK") > -1 ) {
+				  writer.write("Parameter updated.");
+				}
 				for(ConfiguratorElement element:elements){
 					//writer.write("<Form action=\"http://127.0.0.1:7000"+configData.configurePath+"/"+element.url+"\" method=\"POST\">\n");
 					writer.write("<Form action=\""+configData.configurePath+"/"+element.url+"\" method=\"POST\">\n");
