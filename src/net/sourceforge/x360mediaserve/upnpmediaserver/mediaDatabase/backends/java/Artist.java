@@ -39,12 +39,24 @@ public class Artist extends Container{
 			new Comparator<AudioItem>(){
 				public int compare(AudioItem o1,
 						AudioItem o2){
-					int cmp=o1.albumOrder-o2.albumOrder;
-					if(cmp!=0) return cmp;
-					else{
-						if(o1.title==null) return 1;
-						else if(o2.title==null) return -1;
-						else return o1.title.compareToIgnoreCase(o2.title);
+					// If we're in the same album
+					if( o1.albumString.equals( o2.albumString ) ) {
+					  // use the albumOrder 
+					  int cmp = o1.albumOrder - o2.albumOrder;
+					  
+					  if( cmp != 0 ) {
+					    return cmp;
+					  } else if( o1.title == null ) {
+					    return 1;
+					  } else if( o2.title == null ) {
+					    return -1;
+					  } else {
+					    return o1.title.compareToIgnoreCase( o2.title );
+					  }
+					} else if( o1.albumString != null && o2.albumString != null ) {
+					  return o1.albumString.compareToIgnoreCase( o2.albumString );
+					} else {
+					  return -1;
 					}
 				}
 			}
